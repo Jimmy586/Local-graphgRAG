@@ -1,0 +1,72 @@
+---
+layout: default
+---
+{% if site.show-nav-menu %}
+  {% include nav.html%}
+{% endif %}
+
+<div class="mx-auto text-center prose prose-{{site.theme-color}}">
+  <div>
+    <img class="object-cover mx-auto h-48 w-48 mt-0 md:mt-8 rounded-full" src="{{site.baseurl}}/assets/img/{{site.author-image}}"
+      alt="author profile image">
+    <h1 class="dark:text-white">{{site.author}}</h1>
+  </div>
+  {% if site.author-bio %}
+
+  <p style="font-family: 'Courier New', Courier, monospace; font-weight: 600;" class="mx-5 md:mx-auto text-lg xl:!text-2xl lg:py-3 dark:text-white"><span id="typing"></span></p>
+
+  <section id="professional-summary">
+    <div class="summary-content">
+      <p class="text-gray-500 dark:text-stone-100 mx-5 md:mx-auto pb-4 lg:text-md xl:text-xl">
+        I have acquired a solid understanding and hands‑on experience in Cloud computing and Machine Learning throughout my academic and professional journey . I love crafting technological solutions
+        in my spare time to challenge myself. I hold a MSc in Computer Science with a focus on Cloud and Network Infrastructure from <strong>Rennes University, France</strong>, complemented by a BSc in AI from <strong>Cairo University, Egypt</strong>.
+      </p>
+    </div>
+  </section>
+  <p class="text-gray-500 dark:text-stone-100 mx-5 md:mx-auto pb-4 lg:text-md xl:text-xl">
+    I currently operate as a <b>Machine Learning Engineer Intern at <a class="!text-gray-500 dark:!text-stone-200" href="https://www.serma-safety-security.com/en/"> SERMA SAFETY AND SECURITY</a> until August 2024.
+    I also am currently helping my brother on his Startup based in Madagascar as personal project, it is a SuperApp I designed and helped deploy, available in Android and IOs, I am a part-time System Architect at <a class="!text-gray-500 dark:!text-stone-200" href="https://www.azplus.mg/">AZ+ Madagascar</a>
+    </b>.
+    However, feel free to reach out for any offers or colaborations that promise mutual growth and success, I guarantee it will be a win-win.</p>
+    <strong>I am seeking a role and opportunity from which I can learn and grow, while showcasing my know‑how. </strong>
+  <p class="text-gray-500 dark:text-stone-100 mx-5 md:mx-auto pb-4 lg:text-md xl:text-xl">
+  💻 I worked on various projects involving Machine Learning, NLP, Computer Vision, Data Visualization, CI/CD, Cloud based project.
+    My desire is to be an actor in technology's transformation, and by age 35, I vow to allocate 100% of my resources to sustainable solutions for larger well-being.
+  Read <a class="!text-gray-500 dark:!text-stone-200" href="https://vatosoamananjara-jimmy.com/about">more about me</a> .</p>
+  <p> Last update : 06/2024</p>
+
+
+  {% endif %}
+</div>
+</div>
+
+<script type="text/javascript">
+  (function(){
+    type();
+  })();
+
+  function type() {
+    var typing = document.getElementById('typing');
+    const PAUSE = 1500; // 2s
+
+    var typewriter = new Typewriter(typing, {
+      loop: true,
+      delay: 100,
+    });
+
+    typewriter
+      .typeString('Machine Learning Engineer')
+      .pauseFor(PAUSE)
+      .deleteAll()
+      .typeString('Move to Cloud Engineer')
+      .pauseFor(PAUSE)
+      .deleteAll()
+      .typeString('DevOps Practitioner')
+      .pauseFor(PAUSE)
+      .deleteAll()
+      .start();
+  }
+</script>
+
+{% include social-media.html %}
+{% include footer.html %}
